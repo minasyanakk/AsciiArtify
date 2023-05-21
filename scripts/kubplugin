@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Define command-line arguments
-NAMESPACE=$1
-RESOURCE_TYPE=$2
+NAMESPACE=$2
+RESOURCE_TYPE=$1
 
 # Retrieve resource usage statistics from Kubernetes
 kubectl top $RESOURCE_TYPE -n $NAMESPACE | tail -n +2 | while read line
